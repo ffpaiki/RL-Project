@@ -1,1 +1,5 @@
-Please read the file Project1.odf
+# Reinforcement Learning
+
+## Model-Based RL
+
+## Model Free RL
