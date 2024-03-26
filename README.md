@@ -1,5 +1,8 @@
 # Reinforcement Learning
 
+
+
+
 - [Reinforcement Learning](#reinforcement-learning)
   - [Multi-Armed Bandit](#multi-armed-bandit)
     - [Policies](#policies)
@@ -14,7 +17,8 @@
       - [Policy Iteration](#policy-iteration)
       - [Value Iteration](#value-iteration)
     - [Dynamic Programming \& Bellman Optimality](#dynamic-programming--bellman-optimality)
-      - [Non-Linear Dynamics](#non-linear-dynamics)
+    - [Non-Linear Dynamics](#non-linear-dynamics)
+      - [Optimal Control and HJB](#optimal-control-and-hjb)
   - [Model Free RL](#model-free-rl)
     - [Gradient Free](#gradient-free)
       - [Off Policy](#off-policy)
@@ -93,7 +97,8 @@ $V^{\pi}(S)=\sum_{S'} P(S'|S,\pi(S))[R(S,\pi(S),S')+\gamma V^{\pi}(S')]$
 
 ### Dynamic Programming & Bellman Optimality
 
-#### Non-Linear Dynamics
+### Non-Linear Dynamics
+#### Optimal Control and HJB
 
 ## Model Free RL
 
