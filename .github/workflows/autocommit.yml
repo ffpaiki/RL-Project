@@ -28,7 +28,8 @@ jobs:
       - name: Commit changes
         run: |
           git config --local user.email "ff.paiki@unipa.ac.id"
-          git config --local user.name "ffpaiki"
+          # change this with the correct information
+          git config --local user.name "test"
           git add -A
           git commit -m "Auto commit by GitHub Actions"
           
