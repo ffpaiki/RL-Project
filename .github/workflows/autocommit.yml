@@ -1,41 +1,41 @@
-name: Auto commit
+# name: Auto commit
 
-on:
+# on:
 
-  push:
-    branches:
-      - master
+#   push:
+#     branches:
+#       - master
       
-  schedule:
-  - cron: "0 4 1,7,13,19,25 * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
+#   schedule:
+#   - cron: "0 4 1,7,13,19,25 * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
 
-jobs:
-  auto_commit:
-    runs-on: macos-latest
-    steps:
-      - name: DEBUG 
-        run: echo "::debug::Ref = ${{github.ref}}"
-      - uses: actions/checkout@v3      
-        with:
-         persist-credentials: false
-         fetch-depth: 0
+# jobs:
+#   auto_commit:
+#     runs-on: macos-latest
+#     steps:
+#       - name: DEBUG 
+#         run: echo "::debug::Ref = ${{github.ref}}"
+#       - uses: actions/checkout@v3      
+#         with:
+#          persist-credentials: false
+#          fetch-depth: 0
 
-      - name: Modify last update
-        run: |
-          d=`date '+%Y-%m-%dT%H:%M:%SZ'`
-          echo $d > LAST_UPDATED
+#       - name: Modify last update
+#         run: |
+#           d=`date '+%Y-%m-%dT%H:%M:%SZ'`
+#           echo $d > LAST_UPDATED
           
-      - name: Commit changes
-        run: |
-          git config --local user.email "ff.paiki@unipa.ac.id"
-          # change this with the correct information
-          git config --local user.name "test"
-          git add -A
-          git commit -m "Auto commit by GitHub Actions"
+#       - name: Commit changes
+#         run: |
+#           git config --local user.email "ff.paiki@unipa.ac.id"
+#           # change this with the correct information
+#           git config --local user.name "test"
+#           git add -A
+#           git commit -m "Auto commit by GitHub Actions"
           
-      - name: GitHub Push
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          force: true
-          directory: "."
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+#       - name: GitHub Push
+#         uses: ad-m/github-push-action@v0.6.0
+#         with:
+#           force: true
+#           directory: "."
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
